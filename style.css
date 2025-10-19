@@ -1,9 +1,9 @@
 :root {
   /* Core backgrounds */
-  --color-bg: #121212;            
-  --color-sidebar: #1E1E1E;
-  --color-card: #1C1C1C;         
-  --color-border: #2A2A2A;        
+  --color-bg: #121212;            /* main page background */
+  --color-sidebar: #1E1E1E;       /* sidebar panel */
+  --color-card: #1C1C1C;          /* dashboard cards / widgets */
+  --color-border: #2A2A2A;        /* subtle dividers or card edges */
 
   /* Text */
   --color-text-primary: #FFFFFF;
@@ -11,9 +11,9 @@
   --color-heading: #FFFFFF;
 
   /* Accents */
-  --color-accent: #FF8C00;
-  --color-accent-light: #FFA733; 
-  --color-accent-strong: #FF4D00;
+  --color-accent: #FF8C00;        /* main orange accent */
+  --color-accent-light: #FFA733;  /* lighter orange for hovers */
+  --color-accent-strong: #FF4D00; /* alert / notification color */
 
   /* UI elements */
   --color-link-hover: #FFD580;
@@ -22,6 +22,10 @@
   /* Transitions */
   --transition-fast: 0.2s ease;
   --transition-medium: 0.35s ease;
+}
+*{
+  margin: 0;
+  box-sizing: border-box;
 }
 body {
   background-color: var(--color-bg);
@@ -64,10 +68,18 @@ aside {
   background-color: var(--color-sidebar);
   color: var(--color-text-secondary);
 }
-
-.sidebar a.active {
+.sidebar h1 {
+  margin-bottom: 4rem;
+  color:var(--color-accent);
+  font-size: 2rem;
+}
+.sidebar li {
+  margin: 1rem ;
+}
+.sidebar li:hover {
   color: var(--color-accent);
-  border-left: 4px solid var(--color-accent);
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
 }
 .dashboard {
   display: grid;
