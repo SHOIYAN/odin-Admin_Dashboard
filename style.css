@@ -166,7 +166,7 @@ input {
 .bottom-right_side {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  justify-items: start;
+  justify-items: end;
 }
 
 .dashboard {
